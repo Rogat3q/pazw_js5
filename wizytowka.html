@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wizytowka Jakub Sikora</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="naglowek">
+        <img src="avatar.svg" alt="Awatar: inicjały JK na fioletowym tle" class="awatar">
+        <div class="naglowek__tekst"></div>
+        <h1>Jakub Sikora</h1>
+        <p class="podtytul">Technik programista klasa 5p2t</p>
+    </header>
+    <main>
+        <section id="o-mnie">
+        <h2>0 mnie</h2>
+        <d>
+        W sumie to napiszę coś żeby nie było że przeklejałem, ale nwm co napisać o sobie więc piszę to. Lubię programowanie aplikacji zaawansowanych webowych.
+        </p> </section>
+        <section id="umiejetnosci">
+        <h2>Umiejętności</h2>
+        <ul class="lista-umiejetnosci">
+            <li>HTML - struktura semantyczna, formularze</li>
+            <li>CSS - selektory, box model, flexbox</li>
+            <li>JavaScript - DOM, zdarzenia, ES6</li>
+            <li>Git - gałęzie, Pull Request</li>
+        </ul>
+        </section>
+        <section id="kontakt">
+        <h2>Kontakt</h2>
+            <form novalidate id="formularz">
+                <div class="pole">
+                    <label for="imie">Imie i Nazwisko:</label>
+                    <input type="text" name="imie" id="imie">
+                    
+                <p class="blad" id="blad-imie"></p>
+            </div>
+                <div class="pole">
+                    <label for="email">Adres e-mail</label>
+                    <input type="email" id="email" name="email"> <p class="blad" id="blad-email"></p> 
+                </div>
+            <div class="pole">
+            <label for="temat">Temat</label>
+            <select id="temat" name="temat">
+                <option value="">- wybierz temat -</option>
+                <option value="wspolpraca">Propozycja współpracy</option> <option value="pytanie">Pytanie o projekt</option>
+                <option value="inne">Inne</option>
+            </select>
+            <p class="blad" id="blad-temat"></p>
+            </div>
+            <div class="pole">
+            <label for="wiadomosc">Wiadomość</label>
+            <textarea id="wiadomosc" name="wiadomosc" rows="5"></textarea> <p class="blad" id="blad-wiadomosc"></p>
+            </div>
+            <button type="submit" class="przycisk">Wyślij wiadomość</button> 
+            </form>
+            <div id="podziekowanie" class="podziekowanie" hidden>
+                <h3>Dziekuje za wiadomość</h3>
+                <p id="podziekowanie-tresc"></p>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="stopka">
+        <p>
+        Jan Kowalski.
+        <a href="https://github.com/Rogat3q/pazw_js5/tree/Powtórka-HTML%2C-CSS-i-JavaScriptu-wraz-z-ES6%2B">GitHub</a> •
+        <a href="mailto:kuba.sikora07@gmail.com">kuba.sikora07@gmail.com</a>
+        </p> 
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>
