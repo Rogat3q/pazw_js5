@@ -1,21 +1,18 @@
-import { Routes, Route } from "react-router-dom";
-import "./App.css";
-import Layout from "./components/Layout";
-import CatalogPage from "./page/Catalog";
-import SingleFlowerPage from "./page/";
-import AddFlowerPage from "./page/Add";
+import { Routes, Route } from 'react-router-dom'
+import './App.css'
+import Layout from './components/Layout'
+import CatalogPage from './page/CatalogPage'
+import SingleFlowerPage from './page/SingleVegetablePage'
+import AddFlowerPage from './page/SingleVegetablePage'
 
 export default function App() {
-  return (
-    <>
-      <Routes>
-        <Route element={<Layout />}>
-          <Route path="/" element={<CatalogPage />}></Route>
-          <Route path="/:id" element={<Single></Single>}></Route>
-          <Route path="/dodaj" element={<Add></Add>}></Route>
-          
-        </Route>
-      </Routes>
-    </>
-  );
+  return <>
+    <Routes>
+      <Route element={<Layout />}>
+        <Route path='/' element={<CatalogPage />}></Route>
+        <Route path="/vegetable/:id" element={<SingleVegatablePage></SingleVegatablePage>}></Route>
+        <Route path="/add" element={<AddVegatablePage></AddVegatablePage>}></Route>
+      </Route>
+    </Routes>
+  </>
 }
