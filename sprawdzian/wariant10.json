@@ -1,0 +1,37 @@
+[
+  {
+    "numer": 1,
+    "tytul": "Marchew",
+    "klasa": "Korzenie",
+    "cena": 11,
+    "nowosc": true
+  },
+  {
+    "numer": 2,
+    "tytul": "Ziemniak",
+    "klasa": "Liście",
+    "cena": 28,
+    "nowosc": true
+  },
+  {
+    "numer": 3,
+    "tytul": "Pomidor",
+    "klasa": "Owoce",
+    "cena": 45,
+    "nowosc": false
+  },
+  {
+    "numer": 4,
+    "tytul": "Ogórek",
+    "klasa": "Korzenie",
+    "cena": 62,
+    "nowosc": true
+  },
+  {
+    "numer": 5,
+    "tytul": "Papryka",
+    "klasa": "Liście",
+    "cena": 79,
+    "nowosc": true
+  }
+]

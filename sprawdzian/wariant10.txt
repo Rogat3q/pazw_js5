@@ -1,0 +1,4 @@
+- Pola na liście (karta): `tytul`, `klasa`, `cena`, `nowosc`
+- Pola na stronie elementu: `numer`, `tytul`, `klasa`, `cena`, `nowosc`
+- Filtr po polu `klasa` — lista wyboru: Korzenie, Liście, Owoce
+- Dodatkowa funkcja: warunkowe formatowanie karty po DWÓCH polach (zastępuje zwykłe formatowanie z wymagania 6) — `nowosc` i `cena`: nowosc === true i cena >= 50 → klasa border-success border-3; nowosc === true i cena < 50 → klasa border-warning border-3; nowosc === false → bez dodatkowej klasy
