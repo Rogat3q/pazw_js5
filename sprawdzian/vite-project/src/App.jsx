@@ -2,8 +2,8 @@ import { Routes, Route } from 'react-router-dom'
 import './App.css'
 import Layout from './components/Layout'
 import CatalogPage from './page/CatalogPage'
-import SingleFlowerPage from './page/SingleVegetablePage'
-import AddFlowerPage from './page/SingleVegetablePage'
+import SingleVegatablePage from './page/SingleVegetablePage'
+import AddVegatablePage from './page/SingleVegetablePage'
 
 export default function App() {
   return <>
