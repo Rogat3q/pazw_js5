@@ -1,22 +1,21 @@
-JavaScript
 import Navbar from './components/Navbar.jsx'
 import CategoryBar from './components/CategoryBar.jsx'
+import Gallery from './components/Gallery.jsx'
 
 function App() {
-  return (
-    <>
-      <Navbar />
+return (
+<>
 
-      <header className="container py-4 py-lg-5">
-   
-      </header>
-      <main className="container">
-        <CategoryBar />
-      </main>
+<Navbar />
 
+<header className="container py-4 py-1g-5">
+{/* ... bez zmian ... */}
+</header>
 
-    </>
-  )
-}
-
+<main className="container">
+<CategoryBar />
+<Gallery />
+</main>
+</>
+)}
 export default App
