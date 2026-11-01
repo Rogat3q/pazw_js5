@@ -72,7 +72,8 @@ onWybierz={setAktywnaKategoria} />
 
 <Footer />
 <AddPhotoModal />
-  <FiltersOffcanvas />
+<FiltersOffcanvas aktywna={aktywnaKategoria}
+onWybierz={setAktywnaKategoria} />
 </>
 )
 }

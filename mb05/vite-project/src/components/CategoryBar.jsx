@@ -4,34 +4,61 @@ const KATEGORIE = [
   { value: 'miasto', label: 'Miasto' },
 ]
 
-function CategoryBar({ aktywna, onWybierz }) {
+function FiltersOffcanvas({ aktywna, onWybierz }) {
+  function przelacz(kategoria) {
+    onWybierz(aktywna === kategoria ? 'wszystkie' : kategoria)
+  }
+
   return (
-    <div id="kategorie" className="d-flex flex-wrap gap-2 mb-4">
+    <div
+      className="offcanvas offcanvas-start"
+      tabIndex="-1"
+    id="panelFiltrow"
+    aria-labelledby="panelFiltrowLabel"
+  >
+    <div className="offcanvas-header">
+      <h2 className="offcanvas-title h5" id="panelFiltrowLabel">
+        Filtry
+      </h2>
       <button
-
-
-
         type="button"
-        className={`btn btn-outline-primary${aktywna === 'wszystkie' ? ' active' : ''}`}
-        aria-pressed={aktywna === 'wszystkie'}
-        onClick={() => onWybierz('wszystkie')}
-      >
-        Wszystkie
-      </button>
+        className="btn-close"
+        data-bs-dismiss="offcanvas"
+        aria-label="Zamknij"
+      ></button>
+    </div>
+
+    <div className="offcanvas-body">
+      <p className="text-body-secondary">Zaznacz kategorię, którą chcesz zobaczyć:</p>
 
       {KATEGORIE.map(kategoria => (
-        <button
-      key={kategoria.value}
-      type="button"
-      className={`btn btn-outline-primary${aktywna === kategoria.value ? ' active' : ''}`}
-      aria-pressed={aktywna === kategoria.value}
-      onClick={() => onWybierz(kategoria.value)}
-        >
-          {kategoria.label}
+        <div className="form-check" key={kategoria.value}>
+          <input
+            className="form-check-input"
+
+              type="checkbox"
+              id={`filtr-${kategoria.value}`}
+              checked={aktywna === kategoria.value || aktywna === 'wszystkie'}
+              onChange={() => przelacz(kategoria.value)}
+
+
+          />
+          <label className="form-check-label" htmlFor={`filtr-${kategoria.value}`}>
+            {kategoria.label}
+          </label>
+        </div>
+      ))}
+
+      <button
+        type="button"
+        className="btn btn-primary w-100 mt-4"
+        data-bs-dismiss="offcanvas"
+      >
+        Zamknij
       </button>
-    ))}
+    </div>
   </div>
   )
 }
 
-export default CategoryBar
+export default FiltersOffcanvas
