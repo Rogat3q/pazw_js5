@@ -14,6 +14,10 @@ function App() {
   function usunZdjecie(id) {
   setZdjecia(zdjecia.filter(z => z.id !== id))
 }
+function dodajZdjecie(nowe) {
+  const noweId = Math.max(...zdjecia.map(z => z.id)) + 1
+  setZdjecia([...zdjecia, { ...nowe, id: noweId, favorite: false }])
+}
   const [zdjecia, setZdjecia] = useState(photos)
   const [aktywnaKategoria, setAktywnaKategoria] =
     useState('wszystkie')
