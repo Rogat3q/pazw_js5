@@ -18,6 +18,11 @@ function dodajZdjecie(nowe) {
   const noweId = Math.max(...zdjecia.map(z => z.id)) + 1
   setZdjecia([...zdjecia, { ...nowe, id: noweId, favorite: false }])
 }
+function przelaczUlubione(id) {
+  setZdjecia(
+    zdjecia.map(z => (z.id === id ? { ...z, favorite: !z.favorite } : z))
+  )
+}
   const [zdjecia, setZdjecia] = useState(photos)
   const [aktywnaKategoria, setAktywnaKategoria] =
     useState('wszystkie')
@@ -85,7 +90,8 @@ onWybierz={setAktywnaKategoria} />
     Nie znaleziono zdjęć w tej kategorii.
   </div>
 )}
-  <Gallery zdjecia={widoczne} onUsun={usunZdjecie} />
+  <Gallery
+  zdjecia={widoczne} onUsun={usunZdjecie} onPrzelacz={przelaczUlubione}/>
 </main>
 
 <Footer />
