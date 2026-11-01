@@ -7,7 +7,13 @@ import FiltersOffcanvas from './components/FiltersOffcanvas.jsx'
 import Footer from './components/Footer.jsx'
 import photos from './data/photos.json'
 import './App.css'
+
+
+
 function App() {
+  function usunZdjecie(id) {
+  setZdjecia(zdjecia.filter(z => z.id !== id))
+}
   const [zdjecia, setZdjecia] = useState(photos)
   const [aktywnaKategoria, setAktywnaKategoria] =
     useState('wszystkie')
@@ -67,7 +73,7 @@ onWybierz={setAktywnaKategoria} />
     </div>
   )}
 
-  <Gallery zdjecia={widoczne} />
+  <Gallery zdjecia={widoczne} onUsun={usunZdjecie} />
 </main>
 
 <Footer />
